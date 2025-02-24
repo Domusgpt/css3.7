@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thanks for contacting Clear Seas Solutions">
+  <title>Thanks for Your Submission - Clear Seas Solutions</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32.png?text=CS">
+  
+  <style>
+    .thanks-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .thanks-content {
+      max-width: 700px;
+      background: rgba(0, 8, 33, 0.7);
+      border: 1px solid var(--primary);
+      box-shadow: 0 0 30px var(--primary);
+      padding: 3rem;
+      border-radius: 5px;
+      backdrop-filter: blur(10px);
+      animation: appear 1s ease forwards;
+    }
+    
+    @keyframes appear {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    .thanks-icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 2rem;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); filter: drop-shadow(0 0 10px var(--primary)); }
+      50% { transform: scale(1.1); filter: drop-shadow(0 0 20px var(--primary)); }
+      100% { transform: scale(1); filter: drop-shadow(0 0 10px var(--primary)); }
+    }
+    
+    .thanks-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-shadow: 0 0 15px var(--primary);
+      margin-bottom: 1.5rem;
+    }
+    
+    .thanks-message {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    
+    .return-home {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Fullscreen canvas for WebGL -->
+  <canvas id="webgl-canvas"></canvas>
+  
+  <!-- Grid overlay -->
+  <div id="grid-overlay"></div>
+  
+  <!-- Vaporwave sun -->
+  <div id="retro-sun">
+    <div class="sun-core"></div>
+    <div class="sun-glow"></div>
+  </div>
+  
+  <!-- Digital scanlines -->
+  <div id="scanlines"></div>
+
+  <!-- Thanks content -->
+  <main class="thanks-section">
+    <div class="thanks-content">
+      <div class="thanks-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      
+      <h1 class="thanks-title glitch-text" data-text="TRANSMISSION RECEIVED">TRANSMISSION RECEIVED</h1>
+      
+      <div class="thanks-message">
+        <p>Thank you for submitting your consultation request. Our team of AI experts has received your information and will contact you within 24 hours to confirm your appointment.</p>
+        <p>In the meantime, feel free to explore more about our services.</p>
+      </div>
+      
+      <div class="return-home">
+        <a href="index.html" class="cyber-button">
+          <span class="cyber-button-text">RETURN TO HOME</span>
+          <span class="cyber-button-glitch"></span>
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Cursor follower -->
+  <div class="cursor-follower"></div>
+  
+  <!-- Digital noise overlay -->
+  <div id="noise-overlay"></div>
+  
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="main.js"></script>
+  <script src="vaporwave-effects.js"></script>
+  
+  <script>
+    // Trigger success animation
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.addSuccessAnimation) {
+        window.addSuccessAnimation();
+      }
+      
+      // Custom cursor
+      document.addEventListener('mousemove', (e) => {
+        const cursorFollower = document.querySelector('.cursor-follower');
+        if (cursorFollower) {
+          gsap.to(cursorFollower, {
+            x: e.clientX,
+            y: e.clientY,
+            duration: 0.1
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
