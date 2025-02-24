@@ -1,11 +1,15 @@
 [build]
   publish = "/"
-
+  
+# Headers for security and cache settings
 [[headers]]
   for = "/*"
     [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
 
+# Redirects to make SPA routing work properly
 [[redirects]]
   from = "/*"
   to = "/index.html"
