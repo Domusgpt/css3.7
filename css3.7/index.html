@@ -35,8 +35,8 @@
     </div>
     <ul class="nav-links">
       <li data-target="section-1"><span class="cyber-box">01</span>Intro</li>
-      <li data-target="section-2"><span class="cyber-box">02</span>Solutions</li>
-      <li data-target="section-3"><span class="cyber-box">03</span>Expertise</li>
+      <li data-target="section-2"><span class="cyber-box">02</span>Who We Are</li>
+      <li data-target="section-3"><span class="cyber-box">03</span>Solutions</li>
       <li data-target="section-4"><span class="cyber-box">04</span>Portfolio</li>
       <li data-target="section-5"><span class="cyber-box">05</span>Contact</li>
     </ul>
@@ -53,8 +53,8 @@
             <span class="typing-effect">Enterprise AI clarity for the digital frontier</span>
           </div>
           <div class="cta-container">
-            <button class="cyber-button">
-              <span class="cyber-button-text">ENTER THE GRID</span>
+            <button class="cyber-button" onclick="document.getElementById('section-5').scrollIntoView({behavior: 'smooth'});">
+              <span class="cyber-button-text">SCHEDULE CONSULTATION</span>
               <span class="cyber-button-glitch"></span>
             </button>
           </div>
@@ -67,8 +67,53 @@
       </div>
     </section>
     
-    <!-- Section 2: Solutions -->
+    <!-- Section 2: Who We Are (with video) -->
     <section id="section-2" class="section" data-color="255,0,255" data-index="1">
+      <div class="content-wrapper">
+        <div class="section-content appear-animation">
+          <h2 class="section-title glitch-text" data-text="WHO WE ARE">WHO WE ARE</h2>
+          <div class="video-container">
+            <div class="video-wrapper">
+              <iframe 
+                src="https://www.youtube.com/embed/bxSvG2s8e-o?si=-BP77VzGzxIWCbmH" 
+                title="Clear Seas Solutions Introduction" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
+              <div class="video-glow"></div>
+            </div>
+          </div>
+          <p class="video-description">
+            Experience our journey in bridging innovation with clarity. Clear Seas Solutions was founded with a simple mission: 
+            to make enterprise-grade AI accessible to businesses of all sizes. We believe in transparent processes, ethical AI implementation, 
+            and delivering measurable results through cutting-edge technology.
+          </p>
+          <div class="video-stats">
+            <div class="stat-item">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Years in AI</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Clients Served</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-circle" data-speed="1.2"></div>
+        <div class="floating-rectangle" data-speed="1.7"></div>
+        <div class="floating-circle" data-speed="2.1"></div>
+      </div>
+    </section>
+    
+    <!-- Section 3: Solutions -->
+    <section id="section-3" class="section" data-color="45,27,105" data-index="2">
       <div class="content-wrapper">
         <div class="section-content appear-animation">
           <h2 class="section-title glitch-text" data-text="SOLUTIONS">SOLUTIONS</h2>
@@ -102,20 +147,6 @@
               <p>Future-proof systems that evolve with your business and maximize ROI.</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="floating-elements">
-        <div class="floating-circle" data-speed="1.2"></div>
-        <div class="floating-rectangle" data-speed="1.7"></div>
-        <div class="floating-circle" data-speed="2.1"></div>
-      </div>
-    </section>
-    
-    <!-- Section 3: Expertise -->
-    <section id="section-3" class="section" data-color="45,27,105" data-index="2">
-      <div class="content-wrapper">
-        <div class="section-content appear-animation">
-          <h2 class="section-title glitch-text" data-text="EXPERTISE">EXPERTISE</h2>
           <div class="expertise-container">
             <div class="stat-circle">
               <svg viewBox="0 0 100 100">
@@ -141,10 +172,6 @@
               </svg>
               <p>Output Increase</p>
             </div>
-          </div>
-          <div class="testimonial">
-            <p>"Clear Seas transformed our approach to AI, delivering enterprise-quality results on our startup budget."</p>
-            <cite>— Julia Chen, CEO of NexTech Solutions</cite>
           </div>
         </div>
       </div>
@@ -184,6 +211,10 @@
               </div>
             </div>
           </div>
+          <div class="testimonial">
+            <p>"Clear Seas transformed our approach to AI, delivering enterprise-quality results on our startup budget."</p>
+            <cite>— Julia Chen, CEO of NexTech Solutions</cite>
+          </div>
         </div>
       </div>
       <div class="floating-elements">
@@ -193,45 +224,173 @@
       </div>
     </section>
     
-    <!-- Section 5: Contact -->
+    <!-- Section 5: Contact with enhanced consultation booking -->
     <section id="section-5" class="section" data-color="255,0,255" data-index="4">
       <div class="content-wrapper">
         <div class="section-content appear-animation">
-          <h2 class="section-title glitch-text" data-text="CONTACT">CONTACT</h2>
-          <div class="contact-container">
-            <div class="contact-form">
-              <div class="form-group">
-                <input type="text" id="name" class="cyber-input" placeholder=" ">
-                <label for="name" class="cyber-label">NAME</label>
-                <div class="input-line"></div>
+          <h2 class="section-title glitch-text" data-text="SCHEDULE A CONSULTATION">SCHEDULE A CONSULTATION</h2>
+          
+          <div class="consultation-intro">
+            <p>Ready to harness the power of AI for your business? Book your free 30-minute consultation with our experts.</p>
+          </div>
+          
+          <div class="consultation-container">
+            <form id="consultation-form" class="consultation-form" action="https://formspree.io/f/paul@clearseas.solutions" method="POST">
+              <div class="form-section">
+                <h3 class="form-section-title">Your Information</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="text" id="name" name="name" class="cyber-input" placeholder=" " required>
+                    <label for="name" class="cyber-label">FULL NAME</label>
+                    <div class="input-line"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" id="email" name="email" class="cyber-input" placeholder=" " required>
+                    <label for="email" class="cyber-label">EMAIL</label>
+                    <div class="input-line"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="tel" id="phone" name="phone" class="cyber-input" placeholder=" ">
+                    <label for="phone" class="cyber-label">PHONE (OPTIONAL)</label>
+                    <div class="input-line"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" id="company" name="company" class="cyber-input" placeholder=" ">
+                    <label for="company" class="cyber-label">COMPANY</label>
+                    <div class="input-line"></div>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="email" id="email" class="cyber-input" placeholder=" ">
-                <label for="email" class="cyber-label">EMAIL</label>
-                <div class="input-line"></div>
+              
+              <div class="form-section">
+                <h3 class="form-section-title">Consultation Details</h3>
+                <div class="form-row">
+                  <div class="form-group">
+                    <select id="consultation-type" name="consultation_type" class="cyber-select" required>
+                      <option value="" disabled selected>SELECT CONSULTATION TYPE</option>
+                      <option value="phone">Phone Call</option>
+                      <option value="video">Video Call</option>
+                      <option value="email">Email Consultation</option>
+                    </select>
+                    <div class="input-line"></div>
+                  </div>
+                  <div class="form-group">
+                    <input type="date" id="preferred-date" name="preferred_date" class="cyber-input" min="" required>
+                    <label for="preferred-date" class="cyber-label floating">PREFERRED DATE</label>
+                    <div class="input-line"></div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <select id="preferred-time" name="preferred_time" class="cyber-select" required>
+                      <option value="" disabled selected>PREFERRED TIME</option>
+                      <option value="morning">Morning (9AM - 12PM)</option>
+                      <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                      <option value="evening">Evening (5PM - 8PM)</option>
+                    </select>
+                    <div class="input-line"></div>
+                  </div>
+                  <div class="form-group">
+                    <select id="timezone" name="timezone" class="cyber-select" required>
+                      <option value="" disabled selected>YOUR TIMEZONE</option>
+                      <option value="ET">Eastern Time (ET)</option>
+                      <option value="CT">Central Time (CT)</option>
+                      <option value="MT">Mountain Time (MT)</option>
+                      <option value="PT">Pacific Time (PT)</option>
+                      <option value="other">Other (Specify in message)</option>
+                    </select>
+                    <div class="input-line"></div>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea id="message" class="cyber-input" placeholder=" "></textarea>
-                <label for="message" class="cyber-label">MESSAGE</label>
-                <div class="input-line"></div>
+              
+              <div class="form-section">
+                <h3 class="form-section-title">Your Project</h3>
+                <div class="form-group full-width">
+                  <textarea id="message" name="message" class="cyber-input" placeholder=" " rows="4" required></textarea>
+                  <label for="message" class="cyber-label">BRIEFLY DESCRIBE YOUR PROJECT OR QUESTIONS</label>
+                  <div class="input-line"></div>
+                </div>
+                
+                <div class="form-group interest-checkboxes">
+                  <label class="checkbox-label">AREAS OF INTEREST:</label>
+                  <div class="checkbox-group">
+                    <label class="cyber-checkbox">
+                      <input type="checkbox" name="interests" value="ai_strategy">
+                      <span class="checkbox-custom"></span>
+                      AI Strategy
+                    </label>
+                    <label class="cyber-checkbox">
+                      <input type="checkbox" name="interests" value="media_production">
+                      <span class="checkbox-custom"></span>
+                      Media Production
+                    </label>
+                    <label class="cyber-checkbox">
+                      <input type="checkbox" name="interests" value="optimization">
+                      <span class="checkbox-custom"></span>
+                      Process Optimization
+                    </label>
+                    <label class="cyber-checkbox">
+                      <input type="checkbox" name="interests" value="custom_development">
+                      <span class="checkbox-custom"></span>
+                      Custom Development
+                    </label>
+                  </div>
+                </div>
               </div>
-              <button class="cyber-button">
-                <span class="cyber-button-text">TRANSMIT</span>
-                <span class="cyber-button-glitch"></span>
-              </button>
-            </div>
-            <div class="contact-info">
+              
+              <div class="cyber-button-container">
+                <button type="submit" class="cyber-button cyber-button-large pulse-effect">
+                  <span class="cyber-button-text">BOOK YOUR FREE CONSULTATION</span>
+                  <span class="cyber-button-glitch"></span>
+                </button>
+              </div>
+            </form>
+            
+            <div class="contact-info-panel">
+              <div class="contact-header">
+                <h3>Connect With Us</h3>
+                <div class="contact-line"></div>
+              </div>
+              
               <div class="info-block">
                 <svg viewBox="0 0 24 24" class="info-icon">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
                 </svg>
-                <p>contact@clearseassolutions.com</p>
+                <p>paul@clearseas.solutions</p>
               </div>
+              
               <div class="info-block">
                 <svg viewBox="0 0 24 24" class="info-icon">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"></path>
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path>
                 </svg>
-                <p>Schedule a free consultation</p>
+                <p>Available Mon-Fri, 9AM-6PM ET</p>
+              </div>
+              
+              <div class="benefits">
+                <div class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <div class="benefit-text">Free 30-minute consultation</div>
+                </div>
+                <div class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <div class="benefit-text">No obligation</div>
+                </div>
+                <div class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <div class="benefit-text">Custom proposal within 48 hours</div>
+                </div>
+                <div class="benefit-item">
+                  <div class="benefit-icon">✓</div>
+                  <div class="benefit-text">Direct access to AI experts</div>
+                </div>
+              </div>
+              
+              <div class="testimonial-mini">
+                <p>"The consultation alone provided more value than months of research."</p>
+                <cite>— Michael R., CFO at TechStartup</cite>
               </div>
             </div>
           </div>
@@ -266,6 +425,29 @@
     </div>
   </div>
   
+  <!-- Success message modal -->
+  <div id="success-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="glitch-text" data-text="TRANSMISSION RECEIVED">TRANSMISSION RECEIVED</h3>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"></path>
+          </svg>
+        </div>
+        <p>Your consultation request has been successfully submitted!</p>
+        <p>We'll contact you within 24 hours to confirm your appointment.</p>
+      </div>
+      <button class="cyber-button close-success">
+        <span class="cyber-button-text">CONTINUE</span>
+        <span class="cyber-button-glitch"></span>
+      </button>
+    </div>
+  </div>
+  
   <!-- Scripts -->
   <!-- First load libraries via CDN - no module imports -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -275,5 +457,44 @@
   <!-- Then load your custom scripts as regular scripts, not modules -->
   <script src="main.js"></script>
   <script src="vaporwave-effects.js"></script>
+  
+  <!-- Add form handling script -->
+  <script>
+    // Set minimum date to today for the date picker
+    document.addEventListener('DOMContentLoaded', function() {
+      const today = new Date();
+      const formattedDate = today.toISOString().split('T')[0];
+      document.getElementById('preferred-date').min = formattedDate;
+      
+      // Form submission handling
+      const form = document.getElementById('consultation-form');
+      const successModal = document.getElementById('success-modal');
+      const closeModalButtons = document.querySelectorAll('.close-modal, .close-success');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Normally would send form data to server here
+        // For now, just show success modal
+        successModal.style.display = 'flex';
+        
+        // Reset form
+        form.reset();
+      });
+      
+      // Close modal when clicking close button or outside
+      closeModalButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          successModal.style.display = 'none';
+        });
+      });
+      
+      window.addEventListener('click', function(e) {
+        if (e.target === successModal) {
+          successModal.style.display = 'none';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
