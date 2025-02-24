@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clear Seas Solutions - Vaporwave AI Consulting</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fullscreen canvas for WebGL -->
+  <canvas id="webgl-canvas"></canvas>
+  
+  <!-- Grid overlay -->
+  <div id="grid-overlay"></div>
+  
+  <!-- Vaporwave sun -->
+  <div id="retro-sun">
+    <div class="sun-core"></div>
+    <div class="sun-glow"></div>
+  </div>
+  
+  <!-- Digital scanlines -->
+  <div id="scanlines"></div>
+  
+  <!-- Navigation -->
+  <nav>
+    <div class="logo glitch-text" data-text="CLEAR SEAS">CLEAR SEAS</div>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <ul class="nav-links">
+      <li data-target="section-1"><span class="cyber-box">01</span>Intro</li>
+      <li data-target="section-2"><span class="cyber-box">02</span>Solutions</li>
+      <li data-target="section-3"><span class="cyber-box">03</span>Expertise</li>
+      <li data-target="section-4"><span class="cyber-box">04</span>Portfolio</li>
+      <li data-target="section-5"><span class="cyber-box">05</span>Contact</li>
+    </ul>
+  </nav>
+  
+  <!-- Main content with scroll snapping -->
+  <main id="scroll-container">
+    <!-- Section 1: Hero -->
+    <section id="section-1" class="section" data-color="0,255,255" data-index="0">
+      <div class="content-wrapper">
+        <div class="section-content appear-animation">
+          <h1 class="mega-headline glitch-text" data-text="AI CLARITY">AI CLARITY</h1>
+          <div class="tagline">
+            <span class="typing-effect">Enterprise AI clarity for the digital frontier</span>
+          </div>
+          <div class="cta-container">
+            <button class="cyber-button">
+              <span class="cyber-button-text">ENTER THE GRID</span>
+              <span class="cyber-button-glitch"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-cube" data-speed="2"></div>
+        <div class="floating-cube" data-speed="1.5"></div>
+        <div class="floating-pyramid" data-speed="1.8"></div>
+      </div>
+    </section>
+    
+    <!-- Section 2: Solutions -->
+    <section id="section-2" class="section" data-color="255,0,255" data-index="1">
+      <div class="content-wrapper">
+        <div class="section-content appear-animation">
+          <h2 class="section-title glitch-text" data-text="SOLUTIONS">SOLUTIONS</h2>
+          <div class="solution-cards">
+            <div class="solution-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" class="card-svg">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <h3>AI Strategy</h3>
+              <p>Custom architectures that empower your business with strategic AI implementation.</p>
+            </div>
+            <div class="solution-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" class="card-svg">
+                  <path d="M4 4h16v16H4z"></path>
+                  <path d="M9 9h6v6H9z"></path>
+                </svg>
+              </div>
+              <h3>Media Production</h3>
+              <p>AI-accelerated creative content that delivers enterprise quality on SMB budgets.</p>
+            </div>
+            <div class="solution-card">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" class="card-svg">
+                  <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76zM16 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path>
+                </svg>
+              </div>
+              <h3>Optimization</h3>
+              <p>Future-proof systems that evolve with your business and maximize ROI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-circle" data-speed="1.2"></div>
+        <div class="floating-rectangle" data-speed="1.7"></div>
+        <div class="floating-circle" data-speed="2.1"></div>
+      </div>
+    </section>
+    
+    <!-- Section 3: Expertise -->
+    <section id="section-3" class="section" data-color="45,27,105" data-index="2">
+      <div class="content-wrapper">
+        <div class="section-content appear-animation">
+          <h2 class="section-title glitch-text" data-text="EXPERTISE">EXPERTISE</h2>
+          <div class="expertise-container">
+            <div class="stat-circle">
+              <svg viewBox="0 0 100 100">
+                <circle class="stat-circle-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="stat-circle-progress" cx="50" cy="50" r="45" data-percentage="80"></circle>
+                <text x="50" y="55" text-anchor="middle" class="stat-text">80%</text>
+              </svg>
+              <p>Faster Turnaround</p>
+            </div>
+            <div class="stat-circle">
+              <svg viewBox="0 0 100 100">
+                <circle class="stat-circle-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="stat-circle-progress" cx="50" cy="50" r="45" data-percentage="60"></circle>
+                <text x="50" y="55" text-anchor="middle" class="stat-text">60%</text>
+              </svg>
+              <p>Cost Reduction</p>
+            </div>
+            <div class="stat-circle">
+              <svg viewBox="0 0 100 100">
+                <circle class="stat-circle-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="stat-circle-progress" cx="50" cy="50" r="45" data-percentage="300"></circle>
+                <text x="50" y="55" text-anchor="middle" class="stat-text">3x</text>
+              </svg>
+              <p>Output Increase</p>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p>"Clear Seas transformed our approach to AI, delivering enterprise-quality results on our startup budget."</p>
+            <cite>— Julia Chen, CEO of NexTech Solutions</cite>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-triangle" data-speed="1.4"></div>
+        <div class="floating-rectangle" data-speed="1.9"></div>
+        <div class="floating-cube" data-speed="2.3"></div>
+      </div>
+    </section>
+    
+    <!-- Section 4: Portfolio -->
+    <section id="section-4" class="section" data-color="0,255,255" data-index="3">
+      <div class="content-wrapper">
+        <div class="section-content appear-animation">
+          <h2 class="section-title glitch-text" data-text="PORTFOLIO">PORTFOLIO</h2>
+          <div class="case-studies">
+            <div class="case-card">
+              <div class="case-image">
+                <div class="image-placeholder"></div>
+              </div>
+              <div class="case-content">
+                <h3>Healthcare AI</h3>
+                <p><strong>Challenge:</strong> 50+ videos needed with limited budget</p>
+                <p><strong>Solution:</strong> AI-assisted production pipeline</p>
+                <p><strong>Result:</strong> 200% more content at 40% lower cost</p>
+              </div>
+            </div>
+            <div class="case-card">
+              <div class="case-image">
+                <div class="image-placeholder"></div>
+              </div>
+              <div class="case-content">
+                <h3>Retail Inventory</h3>
+                <p><strong>Challenge:</strong> Overstocking draining revenue</p>
+                <p><strong>Solution:</strong> Custom demand forecasting</p>
+                <p><strong>Result:</strong> 35% reduction in excess inventory</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-pyramid" data-speed="1.3"></div>
+        <div class="floating-circle" data-speed="1.8"></div>
+        <div class="floating-rectangle" data-speed="2.2"></div>
+      </div>
+    </section>
+    
+    <!-- Section 5: Contact -->
+    <section id="section-5" class="section" data-color="255,0,255" data-index="4">
+      <div class="content-wrapper">
+        <div class="section-content appear-animation">
+          <h2 class="section-title glitch-text" data-text="CONTACT">CONTACT</h2>
+          <div class="contact-container">
+            <div class="contact-form">
+              <div class="form-group">
+                <input type="text" id="name" class="cyber-input" placeholder=" ">
+                <label for="name" class="cyber-label">NAME</label>
+                <div class="input-line"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" class="cyber-input" placeholder=" ">
+                <label for="email" class="cyber-label">EMAIL</label>
+                <div class="input-line"></div>
+              </div>
+              <div class="form-group">
+                <textarea id="message" class="cyber-input" placeholder=" "></textarea>
+                <label for="message" class="cyber-label">MESSAGE</label>
+                <div class="input-line"></div>
+              </div>
+              <button class="cyber-button">
+                <span class="cyber-button-text">TRANSMIT</span>
+                <span class="cyber-button-glitch"></span>
+              </button>
+            </div>
+            <div class="contact-info">
+              <div class="info-block">
+                <svg viewBox="0 0 24 24" class="info-icon">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                </svg>
+                <p>contact@clearseassolutions.com</p>
+              </div>
+              <div class="info-block">
+                <svg viewBox="0 0 24 24" class="info-icon">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"></path>
+                </svg>
+                <p>Schedule a free consultation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-elements">
+        <div class="floating-triangle" data-speed="1.5"></div>
+        <div class="floating-cube" data-speed="2.0"></div>
+        <div class="floating-circle" data-speed="1.6"></div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Progress indicator -->
+  <div class="progress-container">
+    <div class="progress-bar"></div>
+  </div>
+  
+  <!-- Cursor follower -->
+  <div class="cursor-follower"></div>
+  
+  <!-- Digital noise overlay -->
+  <div id="noise-overlay"></div>
+  
+  <!-- Loading screen -->
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-text glitch-text" data-text="LOADING">LOADING</div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
