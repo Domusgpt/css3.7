@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const grid = new THREE.Mesh(gridGeometry, gridMaterial);
       scene.add(grid);
       
-      // Export the updateSceneColors function
+      // Export the updateSceneColors function globally
       window.updateSceneColors = (r, g, b) => {
         // Convert RGB to THREE.Color (0-1 range)
         const color1 = new THREE.Color(r/255, g/255, b/255);

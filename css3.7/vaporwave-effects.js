@@ -1,5 +1,4 @@
 // Additional vaporwave effects module
-// Import this after main.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // Create dynamic VHS distortion effect
@@ -227,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // ===== Ambient Audio Effects =====
+  function setupAudioEffects() {
   function setupAudioEffects() {
     // Create audio context
     let audioContext;
